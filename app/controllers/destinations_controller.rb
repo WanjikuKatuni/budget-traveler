@@ -37,12 +37,23 @@ class DestinationsController < ApplicationController
 
 
 
-    
+
     def increment_likes
         destination = Destination.find_by(id: params[:id])
         if destination
             destination.update(likes: destination.likes + 1)
             render json: destination
+        else
+            render json: {error: "Budget-destination not found"}, status: :not_found
+        end
+    end
+
+    def destroy
+        destination = Destination.find_by(id: params[:id])
+        if destination
+            destination.destroy
+            # head :no_content
+            render json: {}
         else
             render json: {error: "Budget-destination not found"}, status: :not_found
         end
