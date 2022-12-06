@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_06_102312) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_06_103207) do
   create_table "destinations", force: :cascade do |t|
     t.string "destination_name"
     t.string "location"
@@ -22,10 +22,23 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_102312) do
     t.integer "likes", default: 0, null: false
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.string "rating"
+    t.string "comment"
+    t.integer "destination_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["destination_id"], name: "index_reviews_on_destination_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "user_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "reviews", "destinations"
+  add_foreign_key "reviews", "users"
 end
