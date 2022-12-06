@@ -47,6 +47,11 @@ class DestinationsController < ApplicationController
 
 
 
+
+
+
+
+    
     def increment_likes
         destination = Destination.find_by(id: params[:id])
         if destination
