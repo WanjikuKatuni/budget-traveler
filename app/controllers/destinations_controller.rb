@@ -4,7 +4,7 @@ class DestinationsController < ApplicationController
     # GET /destinations
     def index
         destinations = Destination.all
-        render json: destinations
+        render json: destinations, include: :reviews
     end
 
     # GET /destinations/:id
