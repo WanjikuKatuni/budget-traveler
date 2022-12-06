@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users, only: [:index, :show]
   resources :destinations
 
   patch "/destinations/:id/like", to: "destinations#increment_likes"

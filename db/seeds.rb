@@ -7,6 +7,14 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
+users = User.create([
+    {user_name: "annie"},
+    {user_name: "wanjiku"},
+    {user_name: "mwangi"},
+    {user_name: "torie"}
+
+])
+        
 destinations = Destination.create([
     {
         destination_name:"hell's kitchen", 
