@@ -23,10 +23,21 @@ class DestinationsController < ApplicationController
         render json: destination, status: :created
     end
 
+    # PATCH /destinations/:id
+    def update
+        destination = Destination.find_by(id: params[:id])
+        if destination
+            destination.update(destination_params)
+            render json: destination
+        else
+            render json: {error: "Budget destination not found"}, status: :not_found
+        end
+    end
+
 
     private
 
     def destination_params
-        params.permit(:destination_name, :location, :cost, :description, :poster_url)
+        params.permit(:destination_name, :location, :cost, :description, :poster_url, :likes)
     end
 end
