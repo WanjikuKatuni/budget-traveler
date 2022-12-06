@@ -34,7 +34,16 @@ class DestinationsController < ApplicationController
         end
     end
 
-
+    def destroy
+        destination = Destination.find_by(id: params[:id])
+        if destination
+            destination.destroy
+            # head :no_content
+            render json: {}
+        else
+            render json: {error: "Budget-destination not found"}, status: :not_found
+        end
+    end
 
 
 
@@ -48,16 +57,7 @@ class DestinationsController < ApplicationController
         end
     end
 
-    def destroy
-        destination = Destination.find_by(id: params[:id])
-        if destination
-            destination.destroy
-            # head :no_content
-            render json: {}
-        else
-            render json: {error: "Budget-destination not found"}, status: :not_found
-        end
-    end
+   
 
 
     private
