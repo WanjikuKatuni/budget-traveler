@@ -7,6 +7,23 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
+reviews = Review.create([
+    {
+        rating:"5star",
+        comment: "excellent budget used it and it worked for me",
+        destination_id: 1,
+        user_id: 2
+    },
+    {
+        rating:"1 star",
+        comment: "some parts are exaggerated, I went and the prices were too high for what is reported here",
+        destination_id: 1,
+        user_id: 2
+    }
+
+])
+
+
 users = User.create([
     {user_name: "annie"},
     {user_name: "wanjiku"},
