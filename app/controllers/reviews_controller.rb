@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
 
     # GET/ reviews/:id
     def show
-        review = Review.find_by(id: params[:id])
+        review = Review.find(params[:id])
         if review
             render json: review, include: ["user", "destination"]
         else

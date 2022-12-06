@@ -4,14 +4,14 @@ class DestinationsController < ApplicationController
     # GET /destinations
     def index
         destinations = Destination.all
-        render json: destinations, include: :reviews
+        render json: destinations, include: ["reviews", "reviews.user"]
     end
 
     # GET /destinations/:id
     def show
         destination = Destination.find_by(id: params[:id])
         if destination
-            render json: destination, include: :reviews
+            render json: destination, include: ["reviews", "reviews.user"]
         else
             render json: {error: "Budget-destination not found"}, status: :not_found
         end
