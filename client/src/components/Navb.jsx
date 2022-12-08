@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {GiAirplaneDeparture, GiTalk} from "react-icons/gi"
 import {FaHome, FaSearch} from "react-icons/fa"
 import {RiContactsBookFill} from "react-icons/ri"
 
 function Navb() {
+
+    const [input, setInput] = useState("")
+
   return (
     <div>
         <nav className="navbar navbar-expand-lg">
@@ -15,7 +18,7 @@ function Navb() {
             </button>
             <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                            <input onChange={(e)=> setInput(e.target.value)}className="form-control me-2" type="text" value={input} placeholder="Search" aria-label="Search"/>
                             <button className="btn btn-outline-danger" type="submit"><FaSearch/></button>
                     </form>
                     <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
