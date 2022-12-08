@@ -11,6 +11,7 @@ function Home() {
         <Landing/>
         <Topdestinations/>
         <Alldestinations/>
+
     </div>
   )
 }

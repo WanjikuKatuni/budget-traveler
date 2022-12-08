@@ -15,7 +15,7 @@ function Landing() {
                 </div>
                 <div className='col-md-6 col-lg-6 col-sm-12 col-xl-6'>
                     <br/>
-                    <img src={landingimg} alt='landing-page-image'/>
+                    <img className='ing-fluid' src={landingimg} alt='landing-page-image'/>
                     
                 </div>
             </div>
