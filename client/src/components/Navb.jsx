@@ -7,6 +7,10 @@ function Navb() {
 
     const [input, setInput] = useState("")
 
+    const submitHandler = (e) => {
+        e.preventDefault();
+    }
+
   return (
     <div>
         <nav className="navbar navbar-expand-lg">
@@ -17,7 +21,7 @@ function Navb() {
             <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <form className="d-flex" role="search">
+                    <form onSubmit={submitHandler} className="d-flex" role="search">
                             <input onChange={(e)=> setInput(e.target.value)}className="form-control me-2" type="text" value={input} placeholder="Search" aria-label="Search"/>
                             <button className="btn btn-outline-danger" type="submit"><FaSearch/></button>
                     </form>
