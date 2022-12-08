@@ -1,15 +1,22 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {GiAirplaneDeparture, GiTalk} from "react-icons/gi"
 import {FaHome, FaSearch} from "react-icons/fa"
 import {RiContactsBookFill} from "react-icons/ri"
+// import { Navigate, useNavigate } from 'react-router'
+// import {useNavigate} from 'react-router-dom'
+
 
 function Navb() {
 
-    const [input, setInput] = useState("")
+    // const [input, setInput] = useState("")
 
-    const submitHandler = (e) => {
-        e.preventDefault();
-    }
+    // // const navigate = useNavigate();
+
+    // const submitHandler = (e) => {
+    //     e.preventDefault();
+    //     // navigate('/searched/'+input)
+        
+    // }
 
   return (
     <div>
