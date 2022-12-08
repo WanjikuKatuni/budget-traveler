@@ -6,7 +6,7 @@ import {RiContactsBookFill} from "react-icons/ri"
 function Navb() {
   return (
     <div>
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
             <GiAirplaneDeparture/>
             <h5 className="navbar-brand" href="#"> Mapeni Travels</h5>
