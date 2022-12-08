@@ -4,7 +4,7 @@ function Topdestinations() {
     const [destinations, setDestinations] = useState([])
 
     useEffect(()=> {
-        getTopdestinations();
+        getTop();
     }, [])
 
 
