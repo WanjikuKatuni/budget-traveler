@@ -11,6 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0% 10%
 }
 
 h3.header {
@@ -19,6 +20,24 @@ h3.header {
   font-size: 2rem;
   color: rgb(83, 83, 83);
   }
+
+h1.landing-header{
+  font-family: 'Rubik Gemstones', cursive;
+  font-size: 5rem;
+}
+
+span#find{
+  color: #F51034;
+  font-family: 'Rubik Gemstones', cursive;
+
+}
+p.landing-text{
+  font-size: 1.5rem;
+}
+p.landing-text2{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
