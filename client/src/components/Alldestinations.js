@@ -19,7 +19,7 @@ function Alldestinations() {
 
   return (
     <div>
-        <h3 className='header'> All Destinations</h3>
+        <h3 className='header'> Featured Destinations</h3>
         <div className='row row-cols-1 row-cols-md-3 g-4 '>
         {destinations.map((destination)=>{
           return(
