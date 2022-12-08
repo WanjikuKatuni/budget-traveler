@@ -1,3 +1,4 @@
+import Alldestinations from "./components/Alldestinations";
 import Topdestinations from "./components/Topdestinations";
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
     <div className="App">
     <h1>Hello</h1>
     <Topdestinations/>
+    <Alldestinations/>
     </div>
   );
 }
