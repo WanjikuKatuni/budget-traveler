@@ -20,10 +20,10 @@ class ReviewsController < ApplicationController
 
     # POST /reviews
     def create
-        review = Review.create!(review_params)
+        review = Review.create(review_params)
         render json: review, status: :created
-    rescue ActiveRecord::RecordInvalid => invalid
-        render json: {errors: invalid.record.errors.full_messages}, status: :unprocessable_entity
+    # rescue ActiveRecord::RecordInvalid => invalid
+    #     render json: {errors: invalid.record.errors.full_messages}, status: :unprocessable_entity
     end
 
 

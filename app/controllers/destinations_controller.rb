@@ -19,10 +19,10 @@ class DestinationsController < ApplicationController
 
     # POST
     def create
-        destination = Destination.create!(destination_params)
+        destination = Destination.create(destination_params)
         render json: destination, status: :created
-    rescue ActiveRecord::RecordInvalid => invalid 
-        render json: {errors: invalid.record.errors.full_messages}, status: :unprocessable_entity   
+    # rescue ActiveRecord::RecordInvalid => invalid 
+    #     render json: {errors: invalid.record.errors.full_messages}, status: :unprocessable_entity   
     end
 
     # PATCH /destinations/:id

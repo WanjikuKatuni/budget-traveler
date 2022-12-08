@@ -6,14 +6,27 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-destinations = Destination.create([
+
+
+
+
+users = User.create!([
+    {user_name: "annie"},
+    {user_name: "wanjiku"},
+    {user_name: "mwangi"},
+    {user_name: "torie"}
+
+])
+
+
+destinations = Destination.create!([
     {
        
         destination_name:"hell's kitchen", 
         location:"Malindi, Kenya", 
         cost:300, 
         description:"The colored canyons of Marafa, also known as Hell's Kitchen, is an odd sandstone canyon outside of Malindi, Kenya. Known locally as Nyari", 
-        poster_url:"https://www.shutterstock.com/image-photo/hells-kitchen-geological-formation-marafa-malindi-1218734836"
+        poster_url:"https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     },
     
     {
@@ -22,7 +35,7 @@ destinations = Destination.create([
         location: "Zanzibar, Tanzania", 
         cost: 500, 
         description:"In the north of Zanzibar, you can find one of the natural lagoon full of sea turtles. In Baraka Aquarium they are buying the turtles, caught by fishermen and they are releasing them back to the fresh ocean water in the lagoon.",
-        poster_url:"https://tuliazanzibar.com/swimming-with-turtles/#gallery-1"
+        poster_url:"https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     },
 
     {
@@ -31,22 +44,29 @@ destinations = Destination.create([
         location: "Tsavo, Kenya", 
         cost: 350, 
         description:"Kenya’s flagship lodges, famed for being among the World’s Most Photographed Lodges. A favourite amongst travellers in search of luxury accommodation, Salt Lick Safari Lodge is a luxurious safari escape set in the heart of the Taita Hills Wildlife Sanctuary overlooking a waterhole and the vast Tsavo plains.",
-        poster_url:"https://saltlicksafarilodge.com/wp-content/uploads/2020/05/Sarova-Salt-Lick-Game-Lodge-Waterhole-scaled.jpeg"
+        poster_url:"https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    },
+    
+    {
+      
+        destination_name:"Haraka Aquarium", 
+        location: "Zanzibar, Tanzania", 
+        cost: 500, 
+        description:"In the north of Zanzibar, you can find one of the natural lagoon full of sea turtles. In Baraka Aquarium they are buying the turtles, caught by fishermen and they are releasing them back to the fresh ocean water in the lagoon.",
+        poster_url:"https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    },
+
+    {
+       
+        destination_name:"Shalt Lick Safari Lodge", 
+        location: "Tsavo, Kenya", 
+        cost: 350, 
+        description:"Kenya’s flagship lodges, famed for being among the World’s Most Photographed Lodges. A favourite amongst travellers in search of luxury accommodation, Salt Lick Safari Lodge is a luxurious safari escape set in the heart of the Taita Hills Wildlife Sanctuary overlooking a waterhole and the vast Tsavo plains.",
+        poster_url:"https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     }
 ])
 
-
-
-
-users = User.create([
-    {user_name: "annie"},
-    {user_name: "wanjiku"},
-    {user_name: "mwangi"},
-    {user_name: "torie"}
-
-])
-
-reviews = Review.create([
+reviews = Review.create!([
     {
         rating:"5star",
         comment: "excellent budget used it and it worked for me",
