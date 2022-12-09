@@ -3,6 +3,7 @@
 import Navi from './Navi'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 function Destination() {
   
@@ -21,7 +22,7 @@ function Destination() {
   }, [params.name]);
 
   return (
-    <div className='destination'>
+    <div className='destination' >
       <Navi/>
 
             <div className="projcard-container">
@@ -50,48 +51,29 @@ function Destination() {
                     <div className="projcard-bar"></div>
                     <div className="projcard-description">{details.description}</div>
                     <div className="projcard-tagbox">
-                      <button type="button" class="btn btn-danger">Check Reviews</button> 
-                      <div className='divider'></div>
-                      <button type="button" class="btn btn-danger">Add Review</button>
+                        {/* <button type="button" className="btn btn-danger">Add Review</button> 
+                          <div className='divider'></div>
+                        <button type="button" className="btn btn-danger">Add Review</button>  */}
                     </div>
                   </div>
                 </div>
               </div>
-    
-              {/* <div class="projcard projcard-green">
-                <div class="projcard-innerbox">
-                  <img class="projcard-img" src="https://picsum.photos/800/600?image=1039" />
-                  <div class="projcard-textbox">
-                    <div class="projcard-title">And a Third Card</div>
-                    <div class="projcard-subtitle">You know what this is by now</div>
-                    <div class="projcard-bar"></div>
-                    <div class="projcard-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</div>
-                    <div class="projcard-tagbox">
-                      <span class="projcard-tag">Excel</span>
-                      <span class="projcard-tag">VBA</span>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-{/*     
-              <div class="projcard projcard-customcolor" style="--projcard-color: #F5AF41;">
-                <div class="projcard-innerbox">
-                  <img class="projcard-img" src="https://picsum.photos/800/600?image=943" />
-                  <div class="projcard-textbox">
-                    <div class="projcard-title">Last Card</div>
-                    <div class="projcard-subtitle">That's the last one. Have a nice day!</div>
-                    <div class="projcard-bar"></div>
-                    <div class="projcard-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
-                    <div class="projcard-tagbox">
-                      <span class="projcard-tag">iOS</span>
-                      <span class="projcard-tag">Android</span>
-                      <span class="projcard-tag">Cordova</span>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
+
     
             </div>
+            <button type="button" className="btn btn-danger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Add Review</button>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <p>Try scrolling the rest of the page to see this option in action.</p>
+                </div>
+            </div> 
+                          <div className='divider'></div>
+            <button type="button" className="btn btn-danger">Check Review</button> 
+
     </div>
   )
 }
