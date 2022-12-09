@@ -31,6 +31,8 @@ function Landing() {
 
     function onSubmit(e){
         e.preventDefault()
+        // clear form after submit
+        e.target.reset()
 
         const newDestination = {
          ...formData,
