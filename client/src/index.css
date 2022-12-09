@@ -16,9 +16,10 @@ body {
 
 h3.header {
   text-align: center;
-  font-family: 'Cardo', serif;
+  font-family: 'Glass Antiqua', cursive;
   font-size: 2rem;
   color: rgb(83, 83, 83);
+  font-weight: 800;
   }
 
 h1.landing-header{
@@ -37,6 +38,27 @@ p.landing-text{
 p.landing-text2{
   font-size: 1.5rem;
   font-weight: 700;
+  
+}
+h5#logoname{
+font-size: 1.5rem;
+font-family: 'Rubik Gemstones', cursive;
+color: #F51034;
+
+}
+span.mapenilogo{
+  font-size: 1.7rem;
+}
+
+li{
+  font-size: 1.2rem;
+}
+
+#card{
+  border: none;
+}
+#cardfooter{
+  border: none;
 }
 
 code {

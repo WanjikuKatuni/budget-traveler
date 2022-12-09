@@ -5,7 +5,7 @@ import landingimg from '../assets/landingf.png'
 function Landing() {
   return (
     <div>
-        <div className='container'>
+        <div className='container-fluid' id='landing-page' >
             <div className='row'>
                 <div className='col-md-4 col-lg-4 col-sm-12 col-xl-s'>
                 <br/><br/><br/><br/>

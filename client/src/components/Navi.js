@@ -13,8 +13,8 @@ function Navi() {
     <div>
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
-                <GiAirplaneDeparture/>
-                <h5 className="navbar-brand" href="#"> Mapeni Travels</h5>
+            <span className='mapenilogo'><GiAirplaneDeparture/></span>
+                <h5 className="navbar-brand" id='logoname'> Mapeni Travels</h5>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
