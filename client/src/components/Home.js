@@ -4,6 +4,7 @@ import Landing from './Landing'
 import Navi from './Navi'
 import Topdestinations from './Topdestinations'
 
+
 function Home() {
   return (
     <div>
