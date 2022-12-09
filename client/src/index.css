@@ -14,6 +14,15 @@ body {
   margin: 0% 10%
 }
 
+button.btn {
+	background-color: #F51034;
+	text-align: center;
+	color: white;
+	font-weight: 900;
+	padding: 15px 10px ;
+
+}
+
 h3.header {
   text-align: center;
   font-family: 'Glass Antiqua', cursive;
@@ -62,9 +71,12 @@ li{
 }
 
 .divider {
-	width: 70px;
+	width: 1000px;
 	height: auto;
 	display: inline-block;
+}
+.link {
+	text-decoration-line: none;
 }
 
 code {
@@ -280,4 +292,5 @@ destination {
 	right: -10px;
 	top: 0;
 }
+
 
