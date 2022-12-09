@@ -1,6 +1,7 @@
 
 // holds description and budget data
-import React, { useState } from 'react'
+import Navi from './Navi'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 function Destination() {
@@ -13,46 +14,49 @@ function Destination() {
     .then(res => res.json())
     .then(setDetails)
 
-  }
+  };
+
+  useEffect(()=>{
+    fetchDetails();
+  }, [params.name]);
 
   return (
     <div className='destination'>
-          <h1>just to see it works</h1>
+      <Navi/>
 
             <div className="projcard-container">
       
               <div className="projcard projcard-blue">
                 <div className="projcard-innerbox">
-                  <img className="projcard-img" src="https://picsum.photos/800/600?image=1041" />
+                  <img className="projcard-img" src={details.poster_url}/>
                   <div className="projcard-textbox">
-                    <div className="projcard-title">Card Title</div>
-                    <div className="projcard-subtitle">This explains the card in more detail</div>
+                    <div className="projcard-title">{details.destination_name}</div>
+                    <div className="projcard-subtitle"></div>
                     <div className="projcard-bar"></div>
-                    <div className="projcard-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                    <div className="projcard-description">{details.location}</div>
                     <div className="projcard-tagbox">
-                      <span className="projcard-tag">HTML</span>
-                      <span className="projcard-tag">CSS</span>
+                      <span className="projcard-tag">{details.likes} likes</span>
                     </div>
                   </div>
                 </div>
               </div>
     
-              {/* <div class="projcard projcard-red">
-                <div class="projcard-innerbox">
-                  <img class="projcard-img" src="https://picsum.photos/800/600?image=1080" />
-                  <div class="projcard-textbox">
-                    <div class="projcard-title">That's Another Card</div>
-                    <div class="projcard-subtitle">I don't really think that I need to explain anything here</div>
-                    <div class="projcard-bar"></div>
-                    <div class="projcard-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                    <div class="projcard-tagbox">
-                      <span class="projcard-tag">PHP</span>
-                      <span class="projcard-tag">SQL</span>
-                      <span class="projcard-tag">Database</span>
+              <div className="projcard projcard-red">
+                <div className="projcard-innerbox">
+                  <img className="projcard-img" src={details.poster_url} />
+                  <div className="projcard-textbox">
+                    <div className="projcard-title">Cost: ${details.cost}</div>
+                    <div className="projcard-subtitle"></div>
+                    <div className="projcard-bar"></div>
+                    <div className="projcard-description">{details.description}</div>
+                    <div className="projcard-tagbox">
+                      <button type="button" class="btn btn-danger">Check Reviews</button> 
+                      <div className='divider'></div>
+                      <button type="button" class="btn btn-danger">Add Review</button>
                     </div>
                   </div>
                 </div>
-              </div> */}
+              </div>
     
               {/* <div class="projcard projcard-green">
                 <div class="projcard-innerbox">
