@@ -1,24 +1,35 @@
-# README
+# MAPENI TRAVELS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Just like the name suggests, Mapeni Travels is an application where people who do not have enough money to travel can get recommendations of the ebst travel destinations with the best prices since people post and share the budgets they used and the total cost. This makes it easier for the user to see the applicability of the trip with the mapeni he, they or she has.
+ [![image](/client/public/home.png)]
 
-Things you may want to cover:
+On the landing page one can be able to view the top and featured destinations and also add a destination (with the cost and budget they used) he,she, or they, would like to share with the users.
+[![image](/client/public/Screenshot-34.png)]
+
+Also, a user can be able to click any of the destinations in the cards to get a better view of the cost, the location and the description of the place.
+[![image](/client/public/dest.png)]
+
+## Tecnologies used
+ - HTML & CSS
+ - Bootstrap
+ - Google Fonts
+ - ReactJs
+ - Rails
 
 * Ruby version
+   Ruby 2.7.4p
 
-* System dependencies
+## System dependencies & Configuration
+    For dependencies {npm install --prefix client} and {bundle install}
 
-* Configuration
+## Database creation & initialization
+    rails db:migrate db:seed
 
-* Database creation
 
-* Database initialization
+## Deployment instructions
+    run rails s -- to start the api backend
+    run npm start --prefix client to start the react frontend
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# License
+MIT*
+Copyright (c) 2022 **Ann Mwangi**
