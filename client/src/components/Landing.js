@@ -1,8 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaCameraRetro } from 'react-icons/fa'
 import landingimg from '../assets/landingf.png'
 
+
 function Landing() {
+
+    // const [place, setPlace] = useState('')
+    // const [location, setLocation] = useState('')
+    // const [cost, setCost] = useState('')
+    // const [description, setDescription]=useState('')
+    // const [image, setImage] =useState('')
+
+    
+        
+
+    const [formData, setFormData]= useState({
+            destination_name: "",
+            location: "",
+            cost: "",
+            description:"",
+            poster_url:"",
+    });
+
+    function onChange(e){
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    }
+
+    function onSubmit(e){
+        e.preventDefault()
+
+        const newDestination = {
+         ...formData,
+         likes:0
+        };
+
+        fetch('/destinations',{
+          method: 'POST',
+          headers: {
+            'Content-Type':'application/json'
+          },
+          body: JSON.stringify(newDestination),
+        })
+        .then((r)=> r.json())
+        .then(newDestination)
+    
+    
+    }
+
   return (
     <div>
         <div className='container-fluid' id='landing-page' >
@@ -29,36 +76,36 @@ function Landing() {
                             </div>
                             <div className="offcanvas-body">
                             <p>Add info on the destination you have been to on a budget to help others plan and spend better</p>
-                            <form>
+                            <form onSubmit={onSubmit}>
                                     <div class="row mb-3">
-                                        <label for="inputEmail3" class="col-sm-4 col-form-label">Place</label>
+                                        <label class="col-sm-4 col-form-label">Place</label>
                                         <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail3"/>
+                                            <input type="text" name="destination_name" class="form-control" value={formData.destination_name} onChange={onChange}/>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <label for="inputEmail3" class="col-sm-4 col-form-label">Location</label>
+                                        <label  class="col-sm-4 col-form-label">Location</label>
                                         <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail3"/>
+                                            <input type="text" name="location" onChange={onChange} class="form-control" value={formData.location} />
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <label for="inputEmail3" class="col-sm-4 col-form-label">Cost</label>
+                                        <label  class="col-sm-4 col-form-label">Cost</label>
                                         <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail3"/>
+                                            <input type="text" name="cost" onChange={onChange} class="form-control" value={formData.cost} />
                                         </div>
                                     </div>
                                     
                                     <div class="row mb-3">
-                                        <label for="inputPassword3" class="col-sm-4 col-form-label">Description</label>
+                                        <label  class="col-sm-4 col-form-label">Description</label>
                                         <div class="col-sm-10">
-                                            <textarea type="password" rows="6" class="form-control" id="inputPassword3">Enter description of budget and costs. Be as detailed as possible....</textarea>
+                                            <textarea type="text" name="description" onChange={onChange} rows="6" class="form-control" value={formData.description}>Enter description of budget and costs. Be as detailed as possible....</textarea>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <label for="inputEmail3" class="col-sm-4 col-form-label">Image url</label>
+                                        <label class="col-sm-4 col-form-label">Image url</label>
                                         <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail3"/>
+                                            <input type="text" name="poster_url" onChange={onChange} class="form-control" value={formData.poster_url} />
                                         </div>
                                     </div>
                                     <button type="submit" class="btn">Submit</button>
