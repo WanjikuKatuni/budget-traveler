@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
   resources :destinations
 
+  post "/login", to: "sessions#create"
+
   patch "/destinations/:id/like", to: "destinations#increment_likes"
 
 
