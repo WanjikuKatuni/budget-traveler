@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :destinations
 
   post "/login", to: "sessions#create"
+  get "/me", to: "users#show"
 
   patch "/destinations/:id/like", to: "destinations#increment_likes"
 
