@@ -61,18 +61,44 @@ function Destination() {
 
     
             </div>
-            <button type="button" className="btn btn-danger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Add Review</button>
-            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" className="btn btn-danger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Add Reviews</button>
+            <div className="offcanvas offcanvas-start" data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div className="offcanvas-header">
+                  <h3 className="offcanvas-title" id="offcanvasWithBothOptionsLabel"> Reviews for {details.destination_name}</h3>
+                  <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
+                <div className="offcanvas-body">
+                  <p>Rating is in a 0 to 5 star rating and comment can be as long as you like</p>
+                  <form>
+                        <div class="row mb-3">
+                          <label for="inputEmail3" class="col-sm-2 col-form-label">Rating</label>
+                          <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3"/>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <label for="inputPassword3" class="col-sm-2 col-form-label">Comment</label>
+                          <div class="col-sm-10">
+                            <textarea type="password" rows="4" class="form-control" id="inputPassword3">Enter comment here....</textarea>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-danger">Submit Review</button>
+                                        </form>
+                </div>
+            </div>           
+
+            <div className='divider'></div>
+
+            <button type="button" className="btn btn-danger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Check Reviews</button>
+            <div className="offcanvas offcanvas-start" data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div className="offcanvas-header">
+                  <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel"> Reviews for {details.destination_name}</h5>
+                  <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div className="offcanvas-body">
                   <p>Try scrolling the rest of the page to see this option in action.</p>
                 </div>
             </div> 
-                          <div className='divider'></div>
-            <button type="button" className="btn btn-danger">Check Review</button> 
 
     </div>
   )
