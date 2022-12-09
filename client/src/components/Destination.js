@@ -1,8 +1,19 @@
 
 // holds description and budget data
-import React from 'react'
+import React, { useState } from 'react'
+import { useParams } from 'react-router-dom'
 
 function Destination() {
+  
+  let params = useParams();
+  const [details, setDetails] = useState({})
+
+  const fetchDetails = async()=>{
+    fetch(`/destinations/${params.name}`)
+    .then(res => res.json())
+    .then(setDetails)
+
+  }
 
   return (
     <div className='destination'>
