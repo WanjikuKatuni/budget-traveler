@@ -21,7 +21,7 @@ function Topdestinations() {
     <div>
         <h3 className='header'> Inspiration From Top Destinations</h3>
         <div className='row row-cols-1 row-cols-md-3 g-4 '>
-        {destinations.map((destination)=>{
+        {destinations.slice(0,3).map((destination)=>{
           return(
                  <div key={destination.id} className='col'>
                   <div  className='card' id='card'>
